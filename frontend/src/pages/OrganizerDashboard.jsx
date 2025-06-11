@@ -24,7 +24,7 @@ function OrganizerDashboard() {
     if (!confirm) return;
 
     try {
-      await axios.put(`http://localhost:5000/api/bookings/cancel/${bookingId}`, {}, { headers });
+      await axios.put(`https://miniproject-1-34zo.onrender.com/api/bookings/cancel/${bookingId}`, {}, { headers });
       alert("Booking cancelled.");
       fetchDashboardData(); // Refresh data
     } catch (err) {
@@ -38,7 +38,7 @@ function OrganizerDashboard() {
     // if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/${bookingId}`, { headers });
+      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/bookings/${bookingId}`, { headers });
       alert("Booking deleted.");
       fetchDashboardData(); // Refresh data
     } catch (err) {
@@ -50,18 +50,18 @@ function OrganizerDashboard() {
   const fetchDashboardData = async () => {
     try {
       // Bookings
-      const bookingsRes = await axios.get("http://localhost:5000/api/bookings/organizer", { headers });
+      const bookingsRes = await axios.get("https://miniproject-1-34zo.onrender.com/api/bookings/organizer", { headers });
       setBookings(bookingsRes.data);
       setPendingBookings(bookingsRes.data.filter(b => b.status === "pending").length);
       setexpertsBookedCount(bookingsRes.data.length);
 
       // Events
-      const eventsRes = await axios.get("http://localhost:5000/api/events/myevents", { headers });
+      const eventsRes = await axios.get("https://miniproject-1-34zo.onrender.com/api/events/myevents", { headers });
       setEventCount(eventsRes.data.length);
 
     
       // Profile Completion
-      const profileRes = await axios.get("http://localhost:5000/api/users/profile", { headers });
+      const profileRes = await axios.get("https://miniproject-1-34zo.onrender.com/api/users/profile", { headers });
       const profile = profileRes.data;
       const fields = ["name", "email", "phone", "bio", "photo"];
       const filled = fields.filter(field => profile[field]);

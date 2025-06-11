@@ -12,7 +12,7 @@ function OrganizerBookings() {
   const fetchBookings = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5000/api/bookings/organizer", { headers });
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/bookings/organizer", { headers });
       setBookings(res.data);
     } catch (err) {
       console.error("Error fetching bookings:", err.message);
@@ -24,7 +24,7 @@ function OrganizerBookings() {
   const handleCancel = async (bookingId) => {
     if (!window.confirm("Are you sure you want to cancel this booking?")) return;
     try {
-      await axios.put(`http://localhost:5000/api/bookings/cancel/${bookingId}`, {}, { headers });
+      await axios.put(`https://miniproject-1-34zo.onrender.com/api/bookings/cancel/${bookingId}`, {}, { headers });
       alert("Booking cancelled.");
       fetchBookings();
     } catch (err) {
@@ -35,7 +35,7 @@ function OrganizerBookings() {
 
   const handleDelete = async (bookingId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/${bookingId}`, { headers });
+      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/bookings/${bookingId}`, { headers });
       alert("Booking deleted.");
       fetchBookings();
     } catch (err) {

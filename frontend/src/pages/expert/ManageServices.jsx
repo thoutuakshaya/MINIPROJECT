@@ -14,7 +14,7 @@ function ManageServices() {
   const fetchServices = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/experts/myservices", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/experts/myservices", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setServices(res.data);
@@ -28,7 +28,7 @@ function ManageServices() {
   const deleteService = async (serviceId) => {
     if (!window.confirm("Are you sure you want to delete this service?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/experts/${serviceId}`, {
+      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/experts/${serviceId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchServices(); // Refresh list after deletion

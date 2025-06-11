@@ -34,7 +34,7 @@ function AddServiceModal({ isOpen, onClose, onServiceAdded }) {
 
       console.log("Payload being sent:", payload);
 
-      await axios.post("http://localhost:5000/api/experts", payload, {
+      await axios.post("https://miniproject-1-34zo.onrender.com/api/experts", payload, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json"

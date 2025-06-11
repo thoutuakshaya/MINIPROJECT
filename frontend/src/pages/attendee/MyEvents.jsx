@@ -24,7 +24,7 @@ function AttendeeMyEvents() {
 
   const fetchUserInfo = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users/me", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/users/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(res.data);
@@ -36,7 +36,7 @@ function AttendeeMyEvents() {
   const fetchMyEvents = async (userId) => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/registrations/myevent",
+        "https://miniproject-1-34zo.onrender.com/api/registrations/myevent",
         {
           params: { userId },
           headers: { Authorization: `Bearer ${token}` },
@@ -164,7 +164,7 @@ function AttendeeMyEvents() {
 
                   {isCompleted && (
                     <a
-                      href={`http://localhost:5000/certificates/${event._id}.pdf`}
+                      href={`https://miniproject-1-34zo.onrender.com/certificates/${event._id}.pdf`}
                       download
                       className="text-indigo-600 hover:text-indigo-800 font-semibold text-sm"
                       aria-label={`Download certificate for ${event.title}`}

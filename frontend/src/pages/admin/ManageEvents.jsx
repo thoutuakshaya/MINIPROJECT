@@ -17,7 +17,7 @@ function AdminManageEvents() {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/events", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/events", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEvents(res.data);
@@ -34,7 +34,7 @@ function AdminManageEvents() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${confirmModal.eventId}`, {
+      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/events/${confirmModal.eventId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setConfirmModal({ isOpen: false, eventId: null });

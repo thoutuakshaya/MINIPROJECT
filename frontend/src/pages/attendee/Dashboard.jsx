@@ -17,13 +17,13 @@ function AttendeeDashboard() {
 
   const fetchData = async () => {
     try {
-      const profileRes = await axios.get("http://localhost:5000/api/users/profile", { headers });
+      const profileRes = await axios.get("https://miniproject-1-34zo.onrender.com/api/users/profile", { headers });
       const profile = profileRes.data;
 
-      const res = await axios.get("http://localhost:5000/api/registrations/myevent", { headers });
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/registrations/myevent", { headers });
       setMyEvents(res.data.registrations || []);
 
-      const recRes = await axios.get("http://localhost:5000/api/events", { headers });
+      const recRes = await axios.get("https://miniproject-1-34zo.onrender.com/api/events", { headers });
       setRecommended(recRes.data || []);
 
       const fields = ["name", "email", "phone", "bio"];

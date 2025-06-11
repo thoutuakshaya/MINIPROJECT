@@ -13,7 +13,7 @@ function ExploreEvents() {
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users/me", {
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/users/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data);
@@ -25,7 +25,7 @@ function ExploreEvents() {
 
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/events/all", {
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/events/all", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEvents(res.data);
@@ -36,7 +36,7 @@ function ExploreEvents() {
 
     const fetchJoinedEvents = async (userId) => {
       try {
-        const res = await axios.get("http://localhost:5000/api/registrations/myevent", {
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/registrations/myevent", {
         params: { userId },
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -62,7 +62,7 @@ function ExploreEvents() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/registrations/register",
+        "https://miniproject-1-34zo.onrender.com/api/registrations/register",
         {
           eventId,
           name: user.name,

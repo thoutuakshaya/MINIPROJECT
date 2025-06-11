@@ -8,7 +8,7 @@ function AdminMessages() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/contact/admin/messages", {
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/contact/admin/messages", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setMessages(res.data);

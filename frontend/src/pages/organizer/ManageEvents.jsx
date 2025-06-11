@@ -17,7 +17,7 @@ function ManageEvents() {
     try {
       const userToken = localStorage.getItem("userToken");
       setToken(userToken);
-      const res = await axios.get("http://localhost:5000/api/events/myevents", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/events/myevents", {
         headers: { Authorization: `Bearer ${userToken}` },
       });
       setEvents(res.data);
@@ -29,7 +29,7 @@ function ManageEvents() {
   const deleteEvent = async (eventId) => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/events/${eventId}`, {
+      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/events/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchEvents();

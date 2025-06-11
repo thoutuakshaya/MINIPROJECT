@@ -10,7 +10,7 @@ function BookVendorsModal({ isOpen, onClose, eventId }) {
 
     const fetchVendors = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/vendors/all");
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/vendors/all");
         setVendors(res.data);
       } catch (err) {
         console.error("Failed to fetch vendors:", err.message);
@@ -24,7 +24,7 @@ function BookVendorsModal({ isOpen, onClose, eventId }) {
     try {
       const token = localStorage.getItem("userToken");
       await axios.post(
-        "http://localhost:5000/api/bookings",
+        "https://miniproject-1-34zo.onrender.com/api/bookings",
         {
           vendorId: selectedVendorId,
           eventId,

@@ -5,7 +5,7 @@ import axios from "axios";
 const fetchAttendees = async (eventId, token) => {
   try {
     const response = await axios.get(
-      `http://localhost:5000/api/registrations/event/${eventId}/registrations`,
+      `https://miniproject-1-34zo.onrender.com/api/registrations/event/${eventId}/registrations`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

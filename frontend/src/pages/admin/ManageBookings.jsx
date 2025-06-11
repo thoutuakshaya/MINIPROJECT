@@ -17,7 +17,7 @@ function ManageBookings() {
       const token = localStorage.getItem("userToken");
       if (!token) throw new Error("Unauthorized: No token provided");
 
-      const res = await axios.get("http://localhost:5000/api/bookings/admin/all", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/bookings/admin/all", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ function ManageBookings() {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem("userToken");
-      await axios.delete(`http://localhost:5000/api/bookings/${confirmModal.bookingId}`, {
+      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/bookings/${confirmModal.bookingId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

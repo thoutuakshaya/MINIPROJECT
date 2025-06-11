@@ -11,7 +11,7 @@ function ExpertReviews() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/experts/reviews", {
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/experts/reviews", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

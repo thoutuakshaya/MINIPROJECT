@@ -11,7 +11,7 @@ function ServiceCard({ service, onDelete, onEdit }) {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/bookings/expert?expertId=${service._id}`,
+        `https://miniproject-1-34zo.onrender.com/api/bookings/expert?expertId=${service._id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("userToken")}`,
@@ -30,7 +30,7 @@ function ServiceCard({ service, onDelete, onEdit }) {
   const handleResponse = async (bookingId, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/bookings/${bookingId}/status`,
+        `https://miniproject-1-34zo.onrender.com/api/bookings/${bookingId}/status`,
         { status },
         {
           headers: {

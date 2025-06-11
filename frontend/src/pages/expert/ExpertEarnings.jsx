@@ -9,7 +9,7 @@ function ExpertEarnings() {
   useEffect(() => {
     const fetchEarnings = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/experts/earnings", {
+        const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/experts/earnings", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEarnings(res.data.total || 0);

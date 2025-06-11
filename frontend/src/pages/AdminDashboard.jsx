@@ -24,7 +24,7 @@ function AdminDashboard() {
 
   const fetchSummary = async (token) => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/summary", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/admin/summary", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSummary(res.data);

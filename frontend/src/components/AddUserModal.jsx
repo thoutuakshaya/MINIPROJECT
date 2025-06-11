@@ -20,7 +20,7 @@ function AddUserModal({ isOpen, onClose, onUserAdded }) {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/users/register", formData, {
+      await axios.post("https://miniproject-1-34zo.onrender.com/api/users/register", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       onUserAdded(); // refresh users list

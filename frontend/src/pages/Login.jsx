@@ -21,7 +21,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://miniproject-1-34zo.onrender.com/api/users/login",
         formData
       );
       localStorage.setItem("userToken", response.data.token);

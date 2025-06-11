@@ -14,7 +14,7 @@ function ManageUsers() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users/admin/users", {
+      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/users/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
@@ -30,7 +30,7 @@ function ManageUsers() {
   const handleDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/users/admin/users/${confirmModal.userId}`,
+        `https://miniproject-1-34zo.onrender.com/api/users/admin/users/${confirmModal.userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -46,7 +46,7 @@ function ManageUsers() {
   const toggleBlock = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/users/admin/users/${id}/block`,
+        `https://miniproject-1-34zo.onrender.com/api/users/admin/users/${id}/block`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -21,7 +21,7 @@ function ExpertDashboard() {
         const headers = { Authorization: `Bearer ${token}` };
 
         const servicesRes = await axios.get(
-          "http://localhost:5000/api/experts/myservices",
+          "https://miniproject-1-34zo.onrender.com/api/experts/myservices",
           { headers }
         );
         const services = servicesRes.data;
@@ -41,11 +41,11 @@ function ExpertDashboard() {
 
         const [bookings, earnings, reviews] = await Promise.all([
           axios.get(
-            `http://localhost:5000/api/bookings/expert?expertId=${serviceId}`,
+            `https://miniproject-1-34zo.onrender.com/api/bookings/expert?expertId=${serviceId}`,
             { headers }
           ),
-          axios.get("http://localhost:5000/api/experts/earnings", { headers }),
-          axios.get("http://localhost:5000/api/experts/reviews", { headers }),
+          axios.get("https://miniproject-1-34zo.onrender.com/api/experts/earnings", { headers }),
+          axios.get("https://miniproject-1-34zo.onrender.com/api/experts/reviews", { headers }),
         ]);
 
         setStats({
