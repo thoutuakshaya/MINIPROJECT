@@ -26,7 +26,7 @@ function Register() {
     setSuccess("");
 
     try {
-      await axios.post("https://miniproject-lasj.onrender.com/api/users/register", formData);
+      await axios.post("https://miniproject-1asj.onrender.com/api/users/register", formData);
       setSuccess("✅ Registered successfully! Please log in.");
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed. Try again.");
