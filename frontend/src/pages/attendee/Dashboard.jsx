@@ -17,13 +17,13 @@ function AttendeeDashboard() {
 
   const fetchData = async () => {
     try {
-      const profileRes = await axios.get("https://https://miniproject-lasj.onrender.com/api/users/profile", { headers });
+      const profileRes = await axios.get("https://https://miniproject-1asj.onrender.com/api/users/profile", { headers });
       const profile = profileRes.data;
 
-      const res = await axios.get("https://https://miniproject-lasj.onrender.com/api/registrations/myevent", { headers });
+      const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/registrations/myevent", { headers });
       setMyEvents(res.data.registrations || []);
 
-      const recRes = await axios.get("https://https://miniproject-lasj.onrender.com/api/events", { headers });
+      const recRes = await axios.get("https://https://miniproject-1asj.onrender.com/api/events", { headers });
       setRecommended(recRes.data || []);
 
       const fields = ["name", "email", "phone", "bio"];

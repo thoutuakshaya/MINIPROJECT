@@ -8,7 +8,7 @@ function ManageExperts() {
   const fetchExperts = async () => {
     try {
       const token = localStorage.getItem("userToken");
-      const res = await axios.get("https://https://miniproject-lasj.onrender.com/api/experts/all", {
+      const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/experts/all", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setExperts(res.data);
@@ -21,7 +21,7 @@ function ManageExperts() {
     try {
       const token = localStorage.getItem("userToken");
       await axios.put(
-        `https://https://miniproject-lasj.onrender.com/api/experts/admin/update/${id}`,
+        `https://https://miniproject-1asj.onrender.com/api/experts/admin/update/${id}`,
         { status },
         {
           headers: { Authorization: `Bearer ${token}` },

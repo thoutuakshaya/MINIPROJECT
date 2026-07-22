@@ -17,7 +17,7 @@ function AdminManageEvents() {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://https://miniproject-lasj.onrender.com/api/events", {
+      const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/events", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEvents(res.data);
@@ -34,7 +34,7 @@ function AdminManageEvents() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://https://miniproject-lasj.onrender.com/api/events/${confirmModal.eventId}`, {
+      await axios.delete(`https://https://miniproject-1asj.onrender.com/api/events/${confirmModal.eventId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setConfirmModal({ isOpen: false, eventId: null });

@@ -17,7 +17,7 @@ const OrganizerProfile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("https://https://miniproject-lasj.onrender.com/api/users/profile", {
+        const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/users/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfile(res.data);
@@ -43,7 +43,7 @@ const OrganizerProfile = () => {
   const handleUpdate = async () => {
     try {
       const res = await axios.put(
-        "https://https://miniproject-lasj.onrender.com/api/users/profile",
+        "https://https://miniproject-1asj.onrender.com/api/users/profile",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -22,7 +22,7 @@ const ProfilePage = () => {
 
   const fetchProfile = async () => {
     try {
-      const { data } = await axios.get("https://https://miniproject-lasj.onrender.com/api/users/profile", config);
+      const { data } = await axios.get("https://https://miniproject-1asj.onrender.com/api/users/profile", config);
       setProfile(data);
     } catch (error) {
       console.error("Error fetching profile", error);

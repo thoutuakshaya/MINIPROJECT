@@ -14,7 +14,7 @@ function ManageServices() {
   const fetchServices = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://https://miniproject-lasj.onrender.com/api/experts/myservices", {
+      const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/experts/myservices", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setServices(res.data);
@@ -28,7 +28,7 @@ function ManageServices() {
   const deleteService = async (serviceId) => {
     if (!window.confirm("Are you sure you want to delete this service?")) return;
     try {
-      await axios.delete(`https://https://miniproject-lasj.onrender.com/api/experts/${serviceId}`, {
+      await axios.delete(`https://https://miniproject-1asj.onrender.com/api/experts/${serviceId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchServices(); // Refresh list after deletion
