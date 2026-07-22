@@ -20,7 +20,7 @@ function CertificatesPage() {
 
   const fetchUserInfo = async () => {
     try {
-      const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/users/me", {
+      const res = await axios.get("https://miniproject-1asj.onrender.com/api/users/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(res.data);
@@ -31,7 +31,7 @@ function CertificatesPage() {
 
   const fetchCompletedEvents = async (userId) => {
     try {
-      const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/registrations/myevent", {
+      const res = await axios.get("https://miniproject-1asj.onrender.com/api/registrations/myevent", {
         params: { userId },
         headers: { Authorization: `Bearer ${token}` },
       });

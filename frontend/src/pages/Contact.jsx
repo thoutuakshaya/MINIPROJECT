@@ -28,7 +28,7 @@ const Contact = () => {
     setStatus('');
 
     try {
-      await axios.post('https://https://miniproject-1asj.onrender.com/api/contact', formData);
+      await axios.post('https://miniproject-1asj.onrender.com/api/contact', formData);
       setStatus('✅ Message sent successfully!');
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     } catch (err) {

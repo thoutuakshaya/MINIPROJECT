@@ -19,7 +19,7 @@ function ExpertProfile() {
     const fetchProfile = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("https://https://miniproject-1asj.onrender.com/api/users/profile", {
+        const res = await axios.get("https://miniproject-1asj.onrender.com/api/users/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = res.data || {};
@@ -52,7 +52,7 @@ function ExpertProfile() {
     setSaving(true);
     setError("");
     try {
-      await axios.put("https://https://miniproject-1asj.onrender.com/api/users/profile", formData, {
+      await axios.put("https://miniproject-1asj.onrender.com/api/users/profile", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Profile updated successfully!");

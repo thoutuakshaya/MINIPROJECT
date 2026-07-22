@@ -11,7 +11,7 @@ const ViewProfile = () => {
   useEffect(() => {
     // Fetch user details from your backend
     axios
-      .get(`https://https://miniproject-1asj.onrender.com/api/users/${id}`) // adjust this URL to your backend user API
+      .get(`https://miniproject-1asj.onrender.com/api/users/${id}`) // adjust this URL to your backend user API
       .then((res) => {
         setUser(res.data);
         setLoading(false);

@@ -10,7 +10,7 @@ function BookingConfirmation() {
     const fetchBooking = async () => {
       try {
         const token = localStorage.getItem("userToken");
-        const res = await axios.get(`https://https://miniproject-1asj.onrender.com/api/bookings/${id}`, {
+        const res = await axios.get(`https://miniproject-1asj.onrender.com/api/bookings/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
