@@ -18,7 +18,7 @@ function CreateEventModal({ isOpen, onClose, onEventAdded }) {
     const token = localStorage.getItem("userToken");
 
     try {
-      await axios.post("https://miniproject-1asj.onrender.com", formData, {
+      await axios.post("https://miniproject-1asj.onrender.com/api/events", formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       onEventAdded(); // <-- call correct prop here to refresh events
