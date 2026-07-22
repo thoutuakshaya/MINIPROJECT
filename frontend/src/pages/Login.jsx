@@ -67,7 +67,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_PROD_BASE_URL}/api/users/login`,
+        `https://miniproject-lasj.onrender.com/api/users/login`,
         formData
       );
       
