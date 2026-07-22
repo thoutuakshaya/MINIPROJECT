@@ -19,7 +19,7 @@ function BookExperts() {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get("https://miniproject-1-34zo.onrender.com/api/experts/all");
+      const res = await axios.get("https://https://miniproject-lasj.onrender.com/api/experts/all");
       setExperts(res.data);
     } catch (err) {
       setError("Unable to fetch experts. Please try again later.");
@@ -44,7 +44,7 @@ function BookExperts() {
     if (!eventDate) return;
     try {
       await axios.post(
-        "https://miniproject-1-34zo.onrender.com/api/bookings",
+        "https://https://miniproject-lasj.onrender.com/api/bookings",
         {
           expertId: selectedExpert._id,
           eventDate,

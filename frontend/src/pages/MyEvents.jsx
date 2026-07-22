@@ -8,7 +8,7 @@ function MyEvents() {
     const fetchEvents = async () => {
       const token = localStorage.getItem('userToken');
       try {
-        const response = await axios.get('https://miniproject-1-34zo.onrender.com/api/events/myevents', {
+        const response = await axios.get('https://https://miniproject-lasj.onrender.com/api/events/myevents', {
           headers: {
             Authorization: `Bearer ${token}`,
           }
@@ -27,7 +27,7 @@ function MyEvents() {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
   
     try {
-      await axios.delete(`https://miniproject-1-34zo.onrender.com/api/events/${id}`, {
+      await axios.delete(`https://https://miniproject-lasj.onrender.com/api/events/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
   

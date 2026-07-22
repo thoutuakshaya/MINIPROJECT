@@ -22,7 +22,7 @@ const handleSubmit = async (e) => {
 
   try {
     const token = localStorage.getItem('userToken');
-    const response = await axios.post('https://miniproject-1-34zo.onrender.com/api/events', formData, {
+    const response = await axios.post('https://https://miniproject-lasj.onrender.com/api/events', formData, {
       headers: {
         Authorization: `Bearer ${token}`,
       }
