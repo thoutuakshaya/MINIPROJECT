@@ -24,7 +24,7 @@ function OrganizerDashboard() {
     if (!confirm) return;
 
     try {
-      await axios.put(`https://miniproject-1-34zo.onrender.com/api/bookings/cancel/${bookingId}`, {}, { headers });
+      await axios.put(`https://miniproject-1asj.onrender.com/api/bookings/cancel/${bookingId}`, {}, { headers });
       alert("Booking cancelled.");
       fetchDashboardData(); // Refresh data
     } catch (err) {
